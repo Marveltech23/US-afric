@@ -8,6 +8,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
+body, html {
+  overflow-x: hidden;
+}
+
 .navbar {
   position: absolute; /* Stays on top of the hero section */
   top: 0;
@@ -24,7 +28,7 @@ margin-right: 30px; */
   padding: 15px;
   z-index: 10;
 }
-
+.navbar
 .logo img {
   height: 50px;
   width: auto;
@@ -474,11 +478,10 @@ margin: 20px;
   margin: auto;
 }
 
-.card {
+.pricing-containercard {
   background-color: #F1F1F1;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   position: relative;
   display: flex;
@@ -536,11 +539,167 @@ margin: 20px;
 .plan-type.silver { color: #C0C0C0; }
 .plan-type.gold { color: #FFD700; }
 
+/* join us  */
+
+.joinus{
+   background-color: #000;
+   padding: 5%;
+}
+.joinus h1 {
+  color: white;
+  text-align: center;
+  font-size: 7vmin;
+  margin-bottom: 18px;
+}
+.joinus h2 {
+  color: white;
+  text-align: center;
+  font-size: 3vmin;
+}
+.joinusbutton {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  border-radius: 10px; 
+}
+
+.joinusb{
+  background-color: white;
+  color: black;
+  padding: 15px 15px 15px 15px;
+  margin-top: 40px;
+  font-size: 13px;
+  border-radius: 7px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  align-items: center;
+text-align: center;}
 
 
+/* footer */
+
+footer {
+  padding: 40px 20px;
+  background-color: #0b1d33;
+  color: #fff;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-section p, .footer-section ul, .footer-section form {
+  margin: 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  color: #1ea185;
+}
+
+/* Newsletter form styling */
+.newsletter form {
+  display: flex;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 30px 0 0 30px;
+  border: none;
+  outline: none;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  background-color: #1ea185;
+  color: white;
+  border: none;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #17a079;
+}
+
+/* Footer bottom section */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px 0;
+  margin-top: 40px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+}
+
+.flag-icon {
+  width: 20px;
+  margin-right: 10px;
+}
+
+#language {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 25px;
+  filter: invert(1);
+}
 
 
 /* Desktop Styles */
+
 @media (min-width: 768px) {
   .highlight {
       flex-direction: row;
@@ -578,6 +737,7 @@ margin: 20px;
 
 
 /* Add responsiveness */
+/* 
 @media (max-width: 1024px) {
   .container {
     flex-direction: column;
@@ -598,7 +758,17 @@ margin: 20px;
   .image-section img {
     max-width: 100%;
   }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+} */
+
+@media (max-width: 768px) {
+  
 }
+
 
 * {
   margin: 0;
@@ -827,4 +997,131 @@ p.speaker-pill {
   border-radius: 25px;
   overflow: hidden;
   margin-bottom: 10px;
+}
+
+
+
+/* Base styles - your existing code */
+
+/* Media Queries for Responsive Design */
+
+/* Mobile devices (up to 600px wide) */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .nav-links {
+    display: block;
+  }
+  
+  .hero h1 {
+    font-size: 16px;
+  }
+
+  .hero h2 {
+    font-size: 40px;
+  }
+
+  .event-details span {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .button {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .left-section,
+  .right-section {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .pricing-container {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-containercard {
+    min-height: auto;
+  }
+
+  .image-section img {
+    max-width: 100%;
+  }
+
+  .container-highlight h1 {
+    font-size: 36px;
+  }
+
+  .container-highlight h2 {
+    font-size: 18px;
+  }
+  
+  .container-logos {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+/* Tablets (up to 900px wide) */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: row;
+    padding: 10px;
+  }
+  
+  .nav-links {
+    display: block;
+  }
+
+  .hero h2 {
+    font-size: 60px;
+  }
+
+  .container {
+    padding: 30px;
+  }
+
+  .left-section,
+  .right-section {
+    max-width: 100%;
+  }
+
+  .pricing-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container-highlight h1 {
+    font-size: 48px;
+  }
+
+  .container-logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop (900px and up) */
+@media (min-width: 901px) {
+  .navbar {
+    padding: 20px;
+  }
+
+  .hero h2 {
+    font-size: 90px;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+  .pricing-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
