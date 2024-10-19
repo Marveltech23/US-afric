@@ -939,9 +939,16 @@ p.speaker-pill {
 }
 
 
-
-
-
+.Partners .card.dark.g-col-3 img {
+  width: 100%; /* Makes images responsive */
+   /* Maintains aspect ratio */
+  max-width: 500px; /* Optional: set a max width */
+  border: 2px solid black; /* Adds a border with a light gray color */
+  border-radius: 10px; /* Rounds the corners of the border */
+  padding: 5px; /* Optional: space between the image and the border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+  background-color: #0d6f46;
+}
 
 
 
@@ -961,11 +968,37 @@ p.speaker-pill {
   .navbar .logo img {
     height: 40px;
   }
-
+/* 
   .nav-links {
     flex-direction: column;
     text-align: center;
-  }
+  } */
+  .menu-btn {
+    display: block;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.nav-links {
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  background-color: black;
+  transform: translateY(-100%); /* Use transform instead of margin */
+  transition: all 0.5s ease;
+}
+
+.mobile-menu {
+  transform: translateY(0); /* Adjust to show the menu */
+  border-bottom-right-radius: 30%;
+}
+
+.nav-links li {
+  margin: 30px auto;
+}
 
   .hero-content {
     margin-top: 50px;
@@ -1049,6 +1082,8 @@ p.speaker-pill {
       font-size: 11px;
       padding: 10px;
   }
+ 
+
 
   .dropdown-content {
       min-width: 100px; /* Adjusted for smaller screens */
@@ -1128,7 +1163,7 @@ p.speaker-pill {
     font-size: 0.9rem; /* Smaller paragraph text */
   }
 
-
+ 
   .ex-agenda-section .description-2,
   .ex-agenda-section .white-text {
     padding: 0 20px; /* Reduced padding for small screens */
@@ -1141,6 +1176,37 @@ p.speaker-pill {
   .ex-agenda-section .subtitle {
     font-size: 18px; /* Adjust subtitle size for mobile */
   }
+
+
+
+  .ex-agenda-section .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ex-agenda-section .col {
+    width: 100%; /* Ensure columns take full width */
+    text-align: center;
+  }
+
+  .ex-agenda-section .subtitle,
+  .ex-agenda-section .body {
+    text-align: center; /* Ensure the text is centered */
+  }
+
+  /* Responsive text for mobile */
+  .ex-agenda-section h1 {
+    font-size: 5vw; /* Responsive heading for mobile */
+  }
+
+  .ex-agenda-section h2 {
+    font-size: 4.5vw;
+  }
+
+  .ex-agenda-section p {
+    font-size: 3.5vw;
+  }
+  
 }
 
 
@@ -1223,6 +1289,28 @@ p.speaker-pill {
 
   .ex-agenda-section .subtitle {
     font-size: 20px; /* Adjust subtitle size for tablets */
+  }
+
+  .ex-agenda-section h1 {
+    font-size: 3.5vw; /* Responsive heading for tablets */
+  }
+
+  .ex-agenda-section h2 {
+    font-size: 3vw;
+  }
+
+  .ex-agenda-section p {
+    font-size: 2.5vw;
+  }
+
+  .ex-agenda-section .row {
+    flex-direction: row; /* Ensure columns are side by side */
+    align-items: center;
+  }
+
+  .ex-agenda-section .col {
+    width: 50%;
+    text-align: left;
   }
 
 }
@@ -1529,49 +1617,5 @@ p.speaker-pill {
 
   .card p {
     font-size: 0.9rem; /* Smaller paragraph text */
-  }
-}
-
-@media (min-width: 481px) and (max-width: 1200px) {
-  .edit-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
-    gap: 15px;
-  }
-
-  .card h3 {
-    font-size: 1rem; /* Slightly larger heading */
-  }
-
-  .card p {
-    font-size: 1rem; /* Normal paragraph size */
-  }
-}
-
-@media (min-width: 1201px) and (max-width: 1600px) {
-  .edit-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
-    gap: 20px;
-  }
-
-  .card h3 {
-    font-size: 1.2rem; /* Default heading size */
-  }
-
-  .card p {
-    font-size: 1rem; /* Default paragraph size */
-  }
-}
-
-@media (min-width: 1601px) {
-  .edit-grid {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns for extra-large screens */
-  }
-
-  .card h3 {
-    font-size: 1.3rem; /* Slightly larger heading for large screens */
-  }
-
-  .card p {
-    font-size: 1.1rem; /* Slightly larger paragraph text */
   }
 }
