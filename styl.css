@@ -907,6 +907,10 @@ img {
   font-size: 14px;
 }
 
+
+
+
+
 /* Speaker section */
 .speaker-btn {
 }
@@ -1123,6 +1127,20 @@ p.speaker-pill {
   .content p {
     font-size: 0.9rem; /* Smaller paragraph text */
   }
+
+
+  .ex-agenda-section .description-2,
+  .ex-agenda-section .white-text {
+    padding: 0 20px; /* Reduced padding for small screens */
+  }
+
+  .ex-agenda-section .body {
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+
+  .ex-agenda-section .subtitle {
+    font-size: 18px; /* Adjust subtitle size for mobile */
+  }
 }
 
 
@@ -1192,6 +1210,19 @@ p.speaker-pill {
 
   .content p {
     font-size: 1rem; /* Normal paragraph size */
+  }
+
+  .ex-agenda-section .description-2,
+  .ex-agenda-section .white-text {
+    padding: 0 50px; /* Moderate padding for medium screens */
+  }
+
+  .ex-agenda-section .body {
+    font-size: 13px; /* Slightly larger font size for tablets */
+  }
+
+  .ex-agenda-section .subtitle {
+    font-size: 20px; /* Adjust subtitle size for tablets */
   }
 
 }
@@ -1345,6 +1376,20 @@ p.speaker-pill {
   font-size: 1.1rem; /* Slightly larger paragraph size */
 }
 
+
+.ex-agenda-section .description-2,
+.ex-agenda-section .white-text {
+  padding: 0 100px; /* Increased padding for larger screens */
+}
+
+.ex-agenda-section .body {
+  font-size: 14px; /* Standard font size */
+}
+
+.ex-agenda-section .subtitle {
+  font-size: 22px; /* Adjust subtitle size for larger screens */
+}
+
 }
 
 
@@ -1454,5 +1499,79 @@ p.speaker-pill {
 
   .content p {
     font-size: 1.2rem; /* Larger paragraph size */
+  }
+
+  .ex-agenda-section .description-2,
+  .ex-agenda-section .white-text {
+    padding: 0 200px; /* Maximum padding for extra-large screens */
+  }
+
+  .ex-agenda-section .subtitle {
+    font-size: 24px; /* Largest subtitle size */
+  }
+
+}
+
+
+
+
+
+/* Media Queries */
+@media (min-width: 319px) and (max-width: 480px) {
+  .edit-grid {
+    grid-template-columns: repeat(2, 1fr); /* 1 column for small screens */
+    gap: 10px; /* Reduce gap for small screens */
+  }
+
+  .card h3 {
+    font-size: 1rem; /* Smaller heading */
+  }
+
+  .card p {
+    font-size: 0.9rem; /* Smaller paragraph text */
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1200px) {
+  .edit-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    gap: 15px;
+  }
+
+  .card h3 {
+    font-size: 1rem; /* Slightly larger heading */
+  }
+
+  .card p {
+    font-size: 1rem; /* Normal paragraph size */
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+  .edit-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+    gap: 20px;
+  }
+
+  .card h3 {
+    font-size: 1.2rem; /* Default heading size */
+  }
+
+  .card p {
+    font-size: 1rem; /* Default paragraph size */
+  }
+}
+
+@media (min-width: 1601px) {
+  .edit-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for extra-large screens */
+  }
+
+  .card h3 {
+    font-size: 1.3rem; /* Slightly larger heading for large screens */
+  }
+
+  .card p {
+    font-size: 1.1rem; /* Slightly larger paragraph text */
   }
 }
