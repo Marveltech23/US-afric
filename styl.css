@@ -965,40 +965,35 @@ p.speaker-pill {
 
 /* Small screens (up to 480px) */
 @media (min-width: 319px) and (max-width: 480px)  {
-  .navbar .logo img {
-    height: 40px;
-  }
+ 
 /* 
   .nav-links {
     flex-direction: column;
     text-align: center;
   } */
-  .menu-btn {
-    display: block;
-}
+
+
+
 
 .navbar {
-    padding: 0;
+  flex-direction: column; /* Stack the navbar items vertically */
+  align-items: flex-start; /* Align them to the left */
+  padding: 10px;
 }
 
 .nav-links {
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  justify-content: center;
-  background-color: black;
-  transform: translateY(-100%); /* Use transform instead of margin */
-  transition: all 0.5s ease;
-}
-
-.mobile-menu {
-  transform: translateY(0); /* Adjust to show the menu */
-  border-bottom-right-radius: 30%;
+  flex-direction: column; /* Stack nav links vertically on smaller screens */
+  align-items: flex-start;
 }
 
 .nav-links li {
-  margin: 30px auto;
+  margin: 10px 0; /* Add spacing between each link */
 }
+
+.navbar .logo img {
+  height: 40px; /* Adjust logo size for small screens */
+}
+
 
   .hero-content {
     margin-top: 50px;
@@ -1206,13 +1201,30 @@ p.speaker-pill {
   .ex-agenda-section p {
     font-size: 3.5vw;
   }
-  
+  .menu-icon {
+    display: none;
+  }
 }
 
 
 
 
 @media (min-width: 481px) and (max-width: 1200px) {
+  
+      .menu-icon {
+    display: none;
+  }
+   .navbar {
+    padding: 20px;
+  }
+
+  .navbar .logo img {
+    height: 45px; /* Slightly smaller logo */
+  }
+
+  .nav-links li a {
+    font-size: 16px; /* Adjust font size for better readability */
+  }
   .Partner {
       height: 45px;
       font-size: 13px;
@@ -1312,6 +1324,7 @@ p.speaker-pill {
     width: 50%;
     text-align: left;
   }
+
 
 }
 
@@ -1603,7 +1616,6 @@ p.speaker-pill {
 
 
 
-
 /* Media Queries */
 @media (min-width: 319px) and (max-width: 480px) {
   .edit-grid {
@@ -1619,3 +1631,7 @@ p.speaker-pill {
     font-size: 0.9rem; /* Smaller paragraph text */
   }
 }
+
+
+
+
