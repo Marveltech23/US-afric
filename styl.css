@@ -1,974 +1,1734 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>US-AFRICA TRADE EXPO</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="styl.css" />
-  </head>
-  <body>
-    
+body {
+  font-family: Arial, sans-serif;
+}
 
+body, html {
+  overflow-x: hidden;
+}
 
-   <nav>
-    <div class="logo">
-      <img src="images/logo.png" alt="Logo" />
-    </div>
-    <ul id="menuList">
-      <li><a href="#Exhibition">Exhibition</a></li>
-      <li><a href="#Organization">Organization</a></li>
-      <li><a href="#Career">Career</a></li>
-    </ul>
-    <div class="menu-icon">
-        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
-    </div>
-</nav>
+.navbar {
+  position: absolute; /* Stays on top of the hero section */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  /* margin: 30px; */
+  /* margin-top: 20px; */
+  /* margin-left: 30px;
+margin-right: 30px; */
+  padding: 15px;
+  z-index: 10;
+}
 
+.navbar
+.logo img {
+  height: 50px;
+  width: auto;
+}
 
-   
-   
-    <section class="hero">
-      <div class="hero-content">
-        <h1>SECURE YOUR SEAT AT</h1>
-        <h2>US-AFRICA</h2>
-        <h2>TRADE EXPO</h2>
-        <h3>
-          It’s a rich tapestry of engaging conversations around emerging
-          technologies, venture building, culture & tourism, entertainment
-          amidst cultural experiences, rich food and impact.
-        </h3>
+.nav-links {
+  list-style: none;
+  display: contents;
+}
 
-        <div class="event-details">
-          <span>Nov 30th</span>
-          <span>|</span>
-          <span>In Person</span>
-          <span>|</span>
-          <span>Hotel Event Center, Lagos</span>
-        </div>
-        <button class="button">SECURE YOUR SEAT</button>
-      </div>
-    </section>
+.nav-links li {
+  margin-left: 20px;
+}
 
-    <div class="image-container">
-      <img src="images/Placeholder.png" alt="" />
+.nav-links li a {
+  color: #808080;
+  text-decoration: none;
+  font-size: 18px;
+}
 
-      <div class="countdown-container">
-        <div class="text-container">
-          <div class="text">SEE YOU IN</div>
-          <div class="line"></div>
-        </div>
-        <div class="countdown">
-          <div class="time-box">
-            <span class="number" id="days">77</span>
-            <span class="label">Days</span>
-          </div>
-          <div class="time-box">
-            <span class="number" id="hours">08</span>
-            <span class="label">Hours</span>
-          </div>
-          <div class="time-box">
-            <span class="number" id="minutes">46</span>
-            <span class="label">Minutes</span>
-          </div>
-          <div class="time-box">
-            <span class="number" id="seconds">12</span>
-            <span class="label">Seconds</span>
-          </div>
-        </div>
-      </div>
+.nav-links li a:hover {
+  color: #6183ff;
+}
 
-      <div class="container">
-        <div class="left-section">
-          <h2>Theme</h2>
-          <h4>Bridging Markets:</h4>
-          <h1>
-            <br />
-            Strengthening US-Africa Trade & Investment <br />
-            For Mutual Benefits
-          </h1>
-          <a href="#" class="btn">Download Brochure</a>
-        </div>
-        <div class="right-section">
-          <h2>Who We Are</h2>
-          <h4>A Ground-Breaking Initiative</h4>
-          <p>
-            The US-Africa Trade Expo is a ground-breaking initiative designed to
-            ignite a new era of economic collaboration between the United States
-            and Africa. This premier event serves as a dynamic platform for
-            businesses, investors, and visionaries from both regions to connect,
-            explore possibilities, and forge lasting partnerships.
-          </p>
-          <div class="image-section">
-            <img src="images/1722853466781 1@2x.png" alt="People Smiling" />
-          </div>
-        </div>
-      </div>
+.hero {
+  /* height: 60vh; */
+  background-image: url("images/logoo.png"); /* Path to your image */
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative; /* Allows stacking the navbar above the hero section */
+}
 
-      <h1>What We Offer</h1>
+.hero-content {
+  max-width: 600px;
+  margin-bottom: 20px;
+  margin-top: 100px;
+}
 
-      <div class="grid-container">
-        <div class="card">
-          <img
-            src="images/bu1.png"
-            alt="Trade & Investment Promotion"
-          />
-          <div class="card-content">
-            <h3>Trade & Investment Promotion</h3>
-            <p>
-              Discover new trade opportunities, explore market access solutions,
-              and forge valuable partnerships across the US and Africa.
-            </p>
-          </div>
-        </div>
+.hero h1 {
+  font-size: 2Opx;
+  font-weight: 300;
+  color: #000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: auto;
+  max-width: auto;
+}
+.hero h2 {
+  font-size: 90px;
+  font-weight: bolder;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: auto;
+  max-width: auto;
+}
 
-        <div class="card">
-          <img
-            src="images/bus2.png"
-            alt="Innovation Exchange"
-          />
-          <div class="card-content">
-            <h3>Innovation Exchange</h3>
-            <p>
-              Join us to share, explore, and collaborate on cutting-edge
-              technologies and visionary ideas that will reshape the future.
-            </p>
-          </div>
-        </div>
+.hero-content h2:first-of-type {
+  background: linear-gradient(90deg, #26b2ff, #002366);
+  -webkit-background-clip: text; /* Clip the gradient to the text */
+  -webkit-text-fill-color: transparent;
+}
 
-        <div class="card">
-          <img src="images/bus3.png" alt="Resource Hub" />
-          <div class="card-content">
-            <h3>Resource Hub</h3>
-            <p>
-              Unlock a world of possibilities with access to essential tools,
-              financial support, and expert advice for navigating foreign
-              markets.
-            </p>
-          </div>
-        </div>
+.hero-content h2:last-of-type {
+  color: black;
+}
+.hero h3 {
+  font-size: 17px;
+  color: #000;
+  font-weight: 200;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: auto;
+  max-width: auto;
+}
 
-        <div class="card">
-          <img
-            src="images/bus4.png"
-            alt="Strengthened Diplomatic Ties"
-          />
-          <div class="card-content">
-            <h3>Strengthened Diplomatic Ties</h3>
-            <p>
-              Cultivate deeper, meaningful diplomatic relationships by
-              collaborating on shared goals and fostering genuine understanding.
-            </p>
-          </div>
-        </div>
+.event-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #000;
+}
 
-        <div class="card">
-          <img
-            src="images/bus5.png"
-            alt="Expanded Educational & Employment Avenues"
-          />
-          <div class="card-content">
-            <h3>Expanded Educational & Employment Avenues</h3>
-            <p>
-              Create pathways to life-changing scholarships, thriving careers,
-              and opportunities where talent knows no boundaries.
-            </p>
-          </div>
-        </div>
+.event-details span {
+  margin: 0 15px;
+  margin-top: 12px;
+}
+.event-details span:first-of-type {
+  font-weight: bold;
+}
+.event-details span:nth-of-type(3) {
+  font-weight: bold;
+}
+.event-details span:last-of-type {
+  font-weight: bold;
+}
 
-        <div class="card">
-          <img
-            src="images/bus6.png"
-            alt="Business Matchmaking"
-          />
-          <div class="card-content">
-            <h3>Business Matchmaking</h3>
-            <p>
-              Our B2B matching program connects businesses with ideal partners,
-              suppliers, and clients to expand reach and drive success.
-            </p>
-          </div>
-        </div>
-      </div>
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.button {
+  background-color: #000;
+  color: aliceblue;
+  height: 45px;
+  padding: 15px 15px 15px 15px;
+  margin-top: 40px;
+  font-size: 13px;
+  border-radius: 7px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+}
+.button:hover {
+  background-color: #26b2ff;
+  transform: scale(1.05);
+}
 
-      <section class="attend-section">
-        <div class="container-fluid">
-          <div class="grid edit-grid">
-            <div class="content g-col">
-              <h2>Who Should Attend</h2>
-              <p>
-                The US-Africa Trade Expo welcomes a diverse group of individuals
-                and organizations from start-ups to established giants, we've
-                got something for everyone looking to make waves in the
-                international market.
-              </p>
-              <button class="cta-button">SECURE YOUR SEAT</button>
-            </div>
-            <div class="card dark g-col-6">
-              <h3>Business Leaders</h3>
-              <p>
-                Expand Your Reach, Forge International Partnerships, And Explore
-                New Markets.
-              </p>
-            </div>
-            <div class="card light g-col-3">
-              <h3>Policy Makers</h3>
-              <p>
-                Shape Stronger Bilateral Trade, Contribute To Diplomatic
-                Collaboration, And Advocate For Economic Growth.
-              </p>
-            </div>
+.image-container {
+  text-align: center;
+  padding-left: 70px;
+  padding-right: 70px;
+}
 
-            <div class="card light g-col-3">
-              <h3>Start-Up Founders</h3>
-              <p>
-                Secure Funding, Gain Exposure To New Markets, And Connect With
-                Potential Partners And Investors.
-              </p>
-            </div>
-            <div class="card light g-col-3">
-              <h3>Investors</h3>
-              <p>
-                Explore High-Growth Ventures, Uncover Innovative Opportunities,
-                And Expand Your Investment Portfolio.
-              </p>
-            </div>
-            <div class="card light g-col-3">
-              <h3>Entrepreneurs</h3>
-              <p>
-                Launch Your Venture On A Global Platform, Connect With Potential
-                Investors, And Tap Into New Markets.
-              </p>
-            </div>
-            <div class="card light g-col-3">
-              <h3>Tech & AI Enthusiasts</h3>
-              <p>
-                Share Cutting-Edge Technologies, Collaborate On Ground-Breaking
-                Solutions, And Propel The Future Of Innovation.
-              </p>
-            </div>
-            <div class="card light g-col-3">
-              <h3>Industry Professionals</h3>
-              <p>
-                Network, Collaborate, And Share Insights With Industry Leaders
-                Across All Sectors.
-              </p>
-            </div>
-            <div class="card light g-col-3">
-              <h3>Financial Institutions</h3>
-              <p>
-                Facilitate International Trade And Investment, And Explore New
-                Business Opportunities.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+.image-container img {
+  margin-top: 30px;
+  position: flex;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;
+  padding: 15px 15px 15px;
+}
+.countdown-container {
+  background: linear-gradient(to right, #4881ff, #4ce690);
+  border-radius: 15px;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-    <br />
+.text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  margin-right: 10px; /* Space between text and the line */
+}
+
+.line {
+  margin: 10px;
+  flex-grow: 1;
+  height: 2px;
+  background-color: #fff;
+}
+
+.countdown {
+  display: flex;
+  justify-content: space-between;
+}
+
+.time-box {
+  text-align: center;
+  margin: 0 40px;
+}
+
+.number {
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+}
+
+.label {
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  min-height: 60vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* hero end here  */
 
 
-    <section class="ex-agenda-section">
-      <div class="container-fluid w-container">
-        <h1 class="white-text">Our Expo Agenda</h1>
-        <p class="description-2">
-          Get ready for an action-packed day of insights and opportunities at
-          our US-Africa Trade Expo. We've curated a program filled with engaging
-          sessions to spark your interest as far as innovation and
-          collaboration.is concerned, some of which include:
-        </p>
-        <br />
-        <div class="row items-center justify-content-center items-center">
-          <div class="col text-end">
-            <section>
-              <p class="subtitle">Diplomatic and Bilateral Trade Roundtable</p>
-              <p class="body">
-                Get ready to explore the role of diplomacy in shaping US-Africa
-                trade relations. Discuss key trade agreements, diplomatic
-                strategies, and government policies that influence bilateral
-                commerce.
-              </p>
-            </section>
-            <br />
-            <section>
-              <p class="subtitle">Educational and Job Opportunity Expo</p>
-              <p class="body">
-                We will connect talent with opportunity, and explore educational
-                programs, scholarships, and job prospects available in both
-                regions.
-              </p>
-            </section>
-            <br />
-            <section>
-              <p class="subtitle">
-                Trade, Investment, and Innovation Exchange Expo
-              </p>
-              <p class="body">
-                The power of innovation will be unleashed, aimed at discovering
-                next-generation solutions, exploring business ventures, and
-                networking with potential partners.
-              </p>
-            </section>
-          </div>
-          <div class="col-7">
-            <img src="./images/expo-circle.png" alt="" />
-          </div>
-          <div class="col text-start">
-            <section>
-              <p class="subtitle">Energy Roundtable</p>
-              <p class="body">
-                Be a part of the system that shapes the future of energy trade
-                and investment. Join discussions on the latest trends and
-                challenges, explore renewable energy opportunities, and
-                collaborate on strategies for sustainable practices.
-              </p>
-            </section>
-            <br />
-            <section>
-              <p class="subtitle">Investment Roundtable</p>
-              <p class="body">
-                With this, there will be the opportunity to connect with
-                investors, financiers, and entrepreneurs. Gain valuable insights
-                into funding opportunities, learn effective investment
-                strategies, and network with key players in the finance and
-                investment ecosystem.
-              </p>
-            </section>
-            <br />
-            <section>
-              <p class="subtitle">Export/Import Roundtable</p>
-              <p class="body">
-                Unravel the complexities of US-Africa trade. Discuss solutions
-                to overcome obstacles like infrastructure gaps, customs
-                complexities, and regulatory hurdles. Identify ways to improve
-                market access and explore the potential of technology in
-                streamlining trade processes.
-              </p>
-            </section>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    
-    <br />
-    <br />
-    <br />
-    <section class="speakers-section m-auto w-container">
-      <div class="container-fluid">
-        <p class="speaker-pill text-end">Proposed Keynote Speakers</p>
-
-        <div class="grid edit-grid edit-grid-2">
-          <div class="content content-2 g-col">
-            <h2>A Stellar Line-up of Speakers</h2>
-            <p>
-              Prepare to be inspired by a distinguished roster of thought
-              leaders, industry experts, and government officials. Our speakers
-              represent the best and brightest minds shaping the future of
-              US-Africa relations. Expect insightful keynote addresses, engaging
-              panel discussions, and valuable networking opportunities.
-            </p>
-          </div>
-
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/woman1.jpeg" alt="" />
-            </div>
-            <h3>Folorunsho Alakija</h3>
-            <p>
-              Group Managing Director,<br />
-              Rose Sharon Group
-            </p>
-          </div>
-
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/dangote.jpeg" alt="" />
-            </div>
-            <h3>Aliko Dangote</h3>
-            <p>Founder, Chairman and CEO of Dangote Group</p>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/3.jpeg" alt="" />
-            </div>
-            <h3>Mike Adenuga</h3>
-            <p>Chairperson, Globacom</p>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/ngozi4.jpeg" alt="" />
-            </div>
-            <h3>Ngozi Okonjo Iweala</h3>
-            <p>Director General, World Trade Organization</p>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/wills6.jpeg" alt="" />
-            </div>
-            <h3>Wills Steven</h3>
-            <p>Consul General, US Consulate office and Mission in Nigeria</p>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img
-                src="./images/6edc6ba971d115a5d904b175a514f035.jpeg"
-                alt=""
-              />
-            </div>
-            <h3>Femi Otedola</h3>
-            <p>Founder, Zenon Petroleum and Gas Ltd</p>
-          </div>
-        </div>
-        <br />
-        <br />
-        <p class="speaker-pill text-end">Proposed Roundtable Speakers</p>
-        <br />
-        <div class="grid edit-grid edit-grid-2">
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/shettima1.jpeg" alt="" />
-            </div>
-            <h3>Kashim Shettimah</h3>
-            <p>Vice President, Federal Republic of Nigeria</p>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/richard2.jpeg" alt="" />
-            </div>
-            <h3>Richard L. Nelson</h3>
-            <p>Power Africa Coordinator - Energy Roundtable</p>
-          </div>
-
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/amusan3.png" alt="" />
-            </div>
-            <h3>Olusola Amusan</h3>
-            <p>CEO, Vesti - Education and Job Opportunity</p>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/bola4.png" alt="" />
-            </div>
-            <h3>Bolaji Olagunju</h3>
-            <p>CEO, Workforce - Education and Job Opportunity</p>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/ore5.jpeg" alt="" />
-            </div>
-            <h3>Ore Boboye</h3>
-            <p>CEO, Jobberman - Education and Job Opportunity</p>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/ebong6.jpeg" alt="" />
-            </div>
-            <h3>Enoh T Ebong</h3>
-            <p>Director of US Trade and Development Agency</p>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/iyin7.png" alt="" />
-            </div>
-            <h3>Iyin Aboyeji</h3>
-            <p>GP. Future Africa</p>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/fraser8.jpeg" alt="" />
-            </div>
-            <h3>Frances Fraser</h3>
-            <p>Director of Continental Services, US Africa Trade Desk</p>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/ebube9.jpeg" alt="" />
-            </div>
-            <h3>Amb. Ebube Ebusike</h3>
-            <p>Minister of Trade, State of Africa in Diaspora</p>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/thelma10.jpeg" alt="" />
-            </div>
-            <h3>Mrs. Thelma Ekiyor</h3>
-            <p>National philanthropy office</p>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/adesina11.jpeg" alt="" />
-            </div>
-            <h3>Akinwunmi Adesina</h3>
-            <p>President, African Development Bank</p>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/Adebayo12.jpeg" alt="" />
-            </div>
-            <h3>Adebayo Adelabu</h3>
-            <p>Minister of Power, Nigeria - Energy Roundtable</p>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/doris13.jpeg" alt="" />
-            </div>
-            <h3>Doris Uzoka-Anite</h3>
-            <p>Minister of trade and investment</p>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img
-                src="./images/travis14.jpeg"
-                alt=""
-                style="object-position: center"
-              />
-            </div>
-            <h3>Travis Adkins</h3>
-            <p>President and CEO US AFRICA Development Foundation (USADF)</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
 
-    <div class="container-highlight">
-      <h1>Highlights</h1>
+.left-section {
+  max-width: 50%;
+  padding-right: 10px;
+  margin-bottom: 265px;
+}
 
-      <div class="highlight">
-          <img src="images/traddd.png" alt="Trade Exhibition">
-          <div class="highlight-text">
-              <h2>Trade Exhibition</h2>
-              <p>
-                  The Trade Exhibition Will Be A Vibrant Showcase Of Products And Services From Both The US And Africa. It’s An Ideal Platform For Businesses To Connect With Potential Partners, Customers, And Investors. This Dynamic Space Will Foster Networking, Collaboration, And Knowledge Exchange, Propelling Business Growth And Expanding Market Reach.
-              </p>
-          </div>
+.left-section h2 {
+  font-size: 1rem;
+  color: #0047ff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+}
 
-          
-      </div>
+.left-section h1 {
+  font-size: 200%;
+  margin: 0;
+  line-height: 1.3;
+  color: #000;
+  text-align: left;
+}
 
-      <div class="highlight">
-          <img src="images/agoo.png" alt="AGOA Workshop">
-          <div class="highlight-text">
-              <h2>AGOA Workshop</h2>
-              <p>
-                  Understanding The Africa Growth And Opportunity Act (AGOA) Is Crucial For Businesses Seeking To Tap Into The US Market. Our AGOA Workshop Will Demystify The Process, Providing Valuable Insights Into Leveraging Its Benefits. Learn How To Navigate The Complexities Of AGOA, Access Essential Resources, And Develop Effective Strategies To Boost Your Exports To The US.
-              </p>
-          </div>
-      </div>
+.left-section h4 {
+  font-size: 2.5rem;
+  font-weight: lighter;
+  color: #000;
+  text-align: left;
+}
 
-      <div class="highlight">
-          <img src="images/usssafrica.png" alt="US-Africa Trade Mission">
-          <div class="highlight-text">
-              <h2>US-Africa Trade Mission</h2>
-              <p>
-                  Embark On An Exciting Journey To The US With Our Exclusive Trade Mission. We’ll Curate A Comprehensive Program Designed To Connect African Businesses With Key Players In The US Market. Attend Industry Conferences, Network With Potential Partners, And Explore New Business Opportunities. This Mission Is Your Passport To Unlocking New Markets And Driving Business Growth.
-              </p>
-          </div>
-      </div>
-  </div>
+.left-section h1 span {
+  display: block;
+}
+
+.left-section p {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 30px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  float: left;
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+.right-section {
+  max-width: 45%;
+  padding-left: 20px;
+  background-color: #f4f7fd;
+  padding: 10px;
+}
+
+.right-section h2 {
+  font-size: 1rem;
+  color: #0047ff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.right-section h3 {
+  font-size: 2.2rem;
+  margin: 0;
+  color: #000;
+  font-weight: bold;
+}
+
+.right-section p {
+  margin: 20px 0;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.image-section {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.image-section img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 5px;
+}
 
 
-  <div class="Partners">
-    <h1>Partners</h1>
+.container-highlight {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(180deg, #002366 49%, #39CB91 98%);
+  border-radius: 25px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
 
-      </div>
+
+ .container-highlight  h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: white;
+  font-size: 64px;
+  font-weight: bold;
+}
+
+
+.highlight {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.highlight img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.highlight-text {
+  margin-top: 20px;
+}
+.container-highlight h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: white ;
+  font-weight: bold;
+}
+
+.container-highlight  p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: white;
+}
+
+
+
+.container-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+  gap: 20px;
+  padding: 40px;
+  justify-items: center;
+  background-color: black;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.button-partner {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+
+}
+
+/* doneee  ee e  e  e  e  e  e  */
+
+.Partner{
+  background-color: #000;
+  color: aliceblue;
+  height: 45px;
+  padding: 15px 15px 15px 15px;
+  margin-top: 40px;
+  font-size: 13px;
+  border-radius: 7px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  align-items: center;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.drop {
+display: flex;
+justify-content: space-between;
+margin: 20px;
+
+}
+
+.drop .dropdown {
+  background-color: #000;
+  border-radius: 10px;
   
-      <section class="speakers-section m-auto w-container"> 
-          <br />
-          <div class="grid edit-grid edit-grid-2">
-            <div class="card dark g-col-3">
-              <div class="col-img">
-                <img src= "./images/image 010.png"  alt="" />
-              </div>
-            </div>
-            <div class="card dark g-col-3">
-              <div class="col-img">
-                <img src="./images/gtc.png" alt="" />
-              </div>
-            </div>
+}
+.drop .dropdown span {
+  color:white;
+  text-align: center;
+  align-items: center;
+}
+
+
+/* Container for pricing cards */
+.pricing-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.pricing-containercard {
+  background-color: #F1F1F1;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* Space out content so button sticks to the bottom */
+  min-height: 600px;  /* Set a minimum height for equal card size */
+}
+
+.plan-type {
+  color: #1ea185;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 32px;
+  margin: 10px 0;
+  color: #000;
+}
+
+.features {
   
-            <div class="card dark g-col-3">
-              <div class="col-img">
-                <img src="./images/image 09.png" alt="" />
-              </div>
-            </div>
-            <div class="card dark g-col-3">
-              <div class="col-img">
-                <img src="./images/image 15.png" alt="" />
-              </div>
-            </div>
+  padding: 7%;
+  margin: 20px 0;
+  text-align: left;
+  flex-grow: 1;  /* Make features take up the extra space */
+}
 
-            <div class="card dark g-col-3">
-              <div class="col-img">
-                <img src="./images/image 4.png" alt="" />
-              </div>
-            </div>
-            <div class="card dark g-col-3">
-              <div class="col-img">
-                <img src="./images/image 6.jpg" alt="" />
-              </div>
-            </div>
-            <div class="card dark g-col-3">
-              <div class="col-img">
-                <img src="./images/image 7.png" alt="" />
-              </div>
-            </div>
-            <div class="card dark g-col-3">
-              <div class="col-img">
-                <img src="./images/Spectarkle Logo.png" alt="" />
-              </div>
-            </div>
-            <div class="card dark g-col-3">
-              <div class="col-img">
-                <img src="./images/acci.png" alt="" />
-              </div>
-          
-            </div>
-            <div class="card dark g-col-3">
-              <div class="col-img">
-                <img src="./images/usafruca.png" alt="" />
-              </div>
-            </div>
-            <div class="card dark g-col-3">
-              <div class="col-img">
-                <img src="./images/prosperaf.png" alt="" />
-              </div>
-            </div>
+.features li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
 
-            <div class="card dark g-col-3">
-              <div class="col-img">
-                <img src="./images/unitedstate.png" alt="" />
-              </div>
-            </div>
+.choose-plan {
+  background-color: #1ea185;
+  border: none;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 20px;  /* Adds spacing between the last feature and the button */
+}
 
-            
-            <div class="card dark g-col-3">
-              <div class="col-img">
-                <img src="./images/tradedesck.png" alt="" />
-              </div>
-            </div>
-            <div class="card dark g-col-3">
-              <div class="col-img">
-                <img src="./images/esti.png" alt="" />
-              </div>
-            </div>
-            <div class="card dark g-col-3">
-              <div class="col-img">
-                <img src="./images/grey.png" alt="" />
-              </div>
-            </div>
+.choose-plan:hover {
+  background-color: #17a079;
+}
 
-            <div class="card dark g-col-3">
-              <div class="col-img">
-                <img src="./images/nor.png" alt="" />
-              </div>
-            </div>
-            <div class="card dark g-col-3">
-              <div class="col-img">
-                <img src="./images/nindd.png" alt="" />
-              </div>
-            </div>
-             
-            <div class="card dark g-col-3">
-              <div class="col-img">
-                <img src="./images/just.png" alt="" />
-              </div>
-            </div>
-            <div class="card dark g-col-3">
-              <div class="col-img">
-                <img
-                  src="./images/optimalcapital.png"
-                  alt=""
-                  style="object-position: center"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+/* Plan-specific colors */
+.plan-type.regular { color: #0066cc; }
+.plan-type.vip { color: #1ea185; }
+.plan-type.vvip { color: #FF9933; }
+.plan-type.silver { color: #C0C0C0; }
+.plan-type.gold { color: #FFD700; }
+
+/* join us  */
+
+.joinus{
+   background-color: #000;
+   padding: 5%;
+}
+.joinus h1 {
+  color: white;
+  text-align: center;
+  font-size: 7vmin;
+  margin-bottom: 18px;
+}
+.joinus h2 {
+  color: white;
+  text-align: center;
+  font-size: 3vmin;
+}
+.joinusbutton {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  border-radius: 10px; 
+}
+
+.joinusb{
+  background-color: white;
+  color: black;
+  padding: 15px 15px 15px 15px;
+  margin-top: 40px;
+  font-size: 13px;
+  border-radius: 7px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  align-items: center;
+text-align: center;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+footer {
+  padding: 40px 20px;
+  background-color: #0b1d33;
+  color: #fff;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-section p, .footer-section ul, .footer-section form {
+  margin: 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  color: #1ea185;
+}
+
+/* Newsletter form styling */
+.newsletter form {
+  display: flex;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 30px 0 0 30px;
+  border: none;
+  outline: none;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  background-color: #1ea185;
+  color: white;
+  border: none;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #17a079;
+}
+
+/* Footer bottom section */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px 0;
+  margin-top: 40px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+}
+
+.flag-icon {
+  width: 20px;
+  margin-right: 10px;
+}
+
+#language {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 25px;
+  filter: invert(1);
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: auto; /* Allow rows to auto-adjust height */
+  grid-template-columns: repeat(auto-fill, minmax(2, 1fr));
+
+  gap: 20px; /* Spacing between cards */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: left;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/*who should attend section*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.attend-section {
+  max-width: 1200px;
+  margin: 70px auto;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.content p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+
+  line-height: 1.5;
+  text-align: left;
+}
+.content {
+  text-align: left; /* Aligns content (including the button) to the left */
+  /* margin-right: 80px; */
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.content-2 {
+  grid-row: span 1;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  height: 65px;
+  width: 250px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 40px;
+  border-radius: 1rem;
+}
+
+.cta-button:hover {
+  background-color: #444;
+}
+
+.grid {
+  display: grid;
+}
+
+.edit-grid {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.card.dark {
+  background-color: #333;
+  color: white;
+}
+
+.card.light {
+  background-color: #39a382;
+  color: white;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ex-agenda-section */
+.w-container {
+  max-width: 1200px;
+}
+
+.ex-agenda-section {
+  background: #020f27;
+  color: #fff;
+  padding-top: 50px;
+  /* height: 500px; */
+}
+
+.white-text {
+  color: #fff;
+}
+
+.ex-agenda-section .description-2,
+.ex-agenda-section .white-text {
+  text-align: center;
+  padding: 0 200px;
+}
+
+.ex-agenda-section .row {
+  color: #8c919f;
+}
+
+img {
+  width: 100%;
+}
+
+.ex-agenda-section .subtitle {
+  color: transparent;
+  background: linear-gradient(89.38deg, #4379ff -2.15%, #2da170 59.79%);
+  background-clip: text;
+  font-weight: 600;
+}
+
+.ex-agenda-section .body {
+  font-size: 14px;
+}
+
+
+
+
+
+/* Speaker section */
+.speaker-btn {
+}
+
+p.speaker-pill {
+  width: fit-content;
+  padding: 5px 50px;
+  background: #97fbd14f;
+  color: #0d6f46;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+.speakers-section .card {
+  background-color: #fff;
+  color: #333;
+  box-shadow: none;
+  border: none;
+  text-align: center;
+}
+
+.col-img {
+  border-radius: 25px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+
+.Partners .card.dark.g-col-3 img {
+  width: 100%; /* Makes images responsive */
+   /* Maintains aspect ratio */
+  max-width: 500px; /* Optional: set a max width */
+  border: 2px solid black; /* Adds a border with a light gray color */
+  border-radius: 10px; /* Rounds the corners of the border */
+  padding: 5px; /* Optional: space between the image and the border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+  background-color: #0d6f46;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVENESS */
+
+/* Small screens (up to 480px) */
+@media (min-width: 319px) and (max-width: 480px)  {
+/* 
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+  } */
    
-      <p class="speaker-pill text-end">This Event will appear on major Media channels</p>
+.navbar {
+  flex-direction: column; /* Stack the navbar items vertically */
+  align-items: flex-start; /* Align them to the left */
+  padding: 10px;
+}
 
-      <section class="speakers-section m-auto w-container"> 
-        <br />
-        <div class="grid edit-grid edit-grid-2">
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src= "./images/arise.png"  alt="" />
-            </div>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/tvc.png" alt="" />
-            </div>
-          </div>
+.nav-links {
+  flex-direction: column; /* Stack nav links vertically on smaller screens */
+  align-items: flex-start;
+}
 
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/fox.png" alt="" />
-            </div>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/nbc.png" alt="" />
-            </div>
-          </div>
+.nav-links li {
+  margin: 10px 0; /* Add spacing between each link */
+}
 
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/thisday.png" alt="" />
-            </div>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/yahoo.png" alt="" />
-            </div>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/africanunion.png" alt="" />
-            </div>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/Busines.png" alt="" />
-            </div>
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/nta.png" alt="" />
-            </div>
-        
-          </div>
-          <div class="card dark g-col-3">
-            <div class="col-img">
-              <img src="./images/ait.png" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-     
-    
-    <div class="button-partner"><button class=" Partner">Partner with us</button>
-    </div>
+.navbar .logo img {
+  height: 40px; /* Adjust logo size for small screens */
+}
 
+  .hero-content {
+    margin-top: 90px;
+  }
 
-     <div class="drop">
-      <h1>Ticket Package</h1>
-      <div class="dropdown">
-       <span>London, UK</span>
-       <div class="dropdown-content">
-         <p>UK</p>
-         <p>USA</p>
-       </div>
-     </div>
-     </div>
+  .hero h2 {
+    font-size: 50px;
+  }
+  .hero h1 {
+    font-size: 20px;
+  }
+  .event-details span {
+    font-size: 14px; /* Mobile-specific font size for span */
+  }
+  .button {
+    width: 100%;
+    margin-top: 20px;
+  }
 
-<!-- Ticket packages -->
+  .hero-content .button {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    padding: 12px 24px; /* Adjust padding for mobile */
+    width: 90%; /* Wider button on mobile screens */
+  }
 
-<div class="pricing-container">
-  <!-- Regular Plan -->
-  <div class="pricing-containercard">
-    <h3 class="plan-type regular">REGULAR</h3>
-    <h1 class="price">₦0.00</h1>
-    <ul class="features">
-      <li>Access to the regular area in the event hall subject to availability after serving VIP Guests</li>
-    </ul>
-    <button class="choose-plan">Choose Plan</button>
-  </div>
+  .image-container {
+    padding: 0 20px;
+  }
 
-  <!-- VIP Plan -->
-  <div class="pricing-containercard">
-    <h3 class="plan-type vip">VIP</h3>
-    <h1 class="price">₦53,000</h1>
-    <ul class="features">
-      <li>Restricted Access to Conference Day 1</li>
-      <li>Reserved Seat</li>
-      <li>Lunch Buffet at Ibom Icon on Conference Day 1</li>
-      <li>Souvenir Goodie Bag</li>
-    </ul>
-    <button class="choose-plan">Choose Plan</button>
-  </div>
+  .image-container img {
+    margin-top: 20px;
+  }
 
-  <!-- VVIP Plan -->
+  .countdown-container {
+    padding: 10px 20px;
+  }
 
-  <div class="pricing-containercard">
-    <h3 class="plan-type vvip">VVIP</h3>
-    <h1 class="price">₦153,000</h1>
-    <ul class="features">
-      <li>Unrestricted Access on Conference Day 1</li>
-      <li>Access to networking events</li>
-      <li>Priority Reserved Seat</li>
-      <li>Lunch Buffet at Ibom Icon on Conference Day 1</li>
-      <li>Souvenir Goodie Bag</li>
-      <li>Airport Pickup and Drop off</li>
-    </ul>
-    <button class="choose-plan">Choose Plan</button>
-  </div>
+  .countdown {
+    flex-direction: column;
+  }
 
-  <div class="pricing-containercard">
-    <h3 class="plan-type vvip">Corporate economy</h3>
-    <h1 class="price">₦365,000</h1>
-    <ul class="features">
-      <li>Unrestricted Access to All AKTW specific events</li>
-      <li> Access to networking events</li>
-      <li> Access to Deal Room</li>
-      <li> Company logo on event programme</li>
-      <li> Share company branded items</li>
-      <li> Lunch Buffet at Ibom Icon for 2 on Conference Day 1</li>
-    </ul>
-    <button class="choose-plan">Choose Plan</button>
-  </div>
+  .time-box {
+    margin: 0 20px;
+  }
 
-  <div class="pricing-containercard">
-    <h3 class="plan-type vvip">Corporate premium</h3>
-    <h1 class="price">₦653,000</h1>
-    <ul class="features">
-      <li>Unrestricted Access all AKTW Events</li>
-      <li> Access to networking events</li>
-      <li> Company logo on event programme</li>
-      <li> Share company branded items</li>
-      <li> Lunch Buffet for 2 at Ibom Icon on Conference Day 1</li>
-      <li> 2 nights Executive Room Accommodation at Ibom Ibon Hotel & Golf Resort (29th and 30th October, 2024)</li>
-      <li> Airport Pickup and Drop off</li>
-      <li> Souvenir Goodie Bag</li>
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .container-highlight {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 15px;
+    }
+
+    .container-highlight h1 {
+        font-size: 36px;
+    }
+
+    .container-highlight h2 {
+        font-size: 20px;
+    }
+
+    .left-section, .right-section {
+        max-width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .left-section h1, .right-section h3 {
+        font-size: 1.6rem;
+    }
+
+    .left-section h4 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 0.9rem;
+    }
+
+    .image-section img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .Partner {
+      height: 40px;
+      font-size: 11px;
+      padding: 10px;
+  }
+ 
 
 
-    </ul>
-    <button class="choose-plan">Choose Plan</button>
-  </div>
-</div>
-    
- <!-- Join us  -->
+  .dropdown-content {
+      min-width: 100px; /* Adjusted for smaller screens */
+  }
 
- <div class="joinus">
-  <h1>Join Us!</h1>
-  <h2>The US-Africa Trade Expo is more than just an event; it's a movement towards a brighter future for both continents. Be part of this transformative journey. Connect with industry leaders, explore new markets, and forge partnerships that will shape the future of trade and investment. Together, we can unlock the full potential of the US-Africa partnership.</h2>
-  <div class="joinusbutton"><button class="joinusb">Secure your Seat</button>
-  </div>
- </div>
+  .drop {
+      margin: 10px;
+  }
 
- <!-- footer  -->
+  .pricing-container {
+      padding: 10px;
+  }
 
- <footer>
-  <div class="footer-container">
-    <!-- Logo and contact information -->
-    <div class="footer-section logo-contact">
-      <img src="images/logo.png" alt="US-Africa Trade Expo Logo" class="footer-logo">
-      <p>+1 (732) 202-0000</p>
-      <p><a href="mailto:support@usafrica.com">support@usafrica.com</a></p>
-    </div>
+  .pricing-containercard {
+      min-height: 400px; /* Reduced height for smaller cards */
+      padding: 15px;
+  }
 
-    <!-- Use US-Africa links -->
-    <div class="footer-section use-usafrica">
-      <h4>Use US-Africa</h4>
-      <ul>
-        <li><a href="#">Buy Tickets</a></li>
-        <li><a href="#">Download Brochure</a></li>
-        <li><a href="#">Be our Partner</a></li>
-        <li><a href="#">Be our Sponsor</a></li>
-      </ul>
-    </div>
+  .plan-type {
+      font-size: 14px;
+  }
 
-    <!-- Contact Us links -->
-    <div class="footer-section contact-us">
-      <h4>Contact Us</h4>
-      <ul>
-        <li><a href="#">Contact Support</a></li>
-        <li><a href="#">Contact Sales</a></li>
-      </ul>
-    </div>
+  .price {
+      font-size: 24px;
+  }
 
-    <!-- Newsletter subscription form -->
-    <div class="footer-section newsletter">
-      <h4>Newsletter</h4>
-      <form action="#">
-        <input type="email" placeholder="Email Address" required>
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-  </div>
-  <!-- Footer Bottom with Social Media Icons -->
-  <div class="footer-bottom">
-    <div class="social-media">
-      <img src="images/emojione_flag-for-united-states.png" alt="US Flag" class="flag-icon">
-      <select name="language" id="language">
-        <option value="en">English</option>
-      </select>
-    </div>
-    <p>Copyright 2024 All Rights Reserved</p>
-    <div class="social-icons">
-      <a href="#"><img src="images/mdi_instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="images/mdi_twitter.png" alt="Twitter"></a>
-      <a href="#"><img src="images/ic_baseline-facebook.png" alt="Facebook"></a>
-      <a href="#"><img src="images/mdi_linkedin.png" alt="LinkedIn"></a>
-    </div>
-  </div>
-</footer>
-   
-<script>
-  let menuList = document.getElementById("menuList")
-  menuList.style.maxHeight = "0px";
+  .features {
+      padding: 5%;
+  }
 
-  function toggleMenu(){
-      if(menuList.style.maxHeight == "0px")
-      {
-          menuList.style.maxHeight = "300px";
-      }
-      else{
-          menuList.style.maxHeight = "0px";
-      }
+  .features li {
+      font-size: 12px;
+  }
+
+  .choose-plan {
+      font-size: 12px;
+  }
+
+  .joinus h1 {
+      font-size: 5vmin;
+  }
+
+  .joinus h2 {
+      font-size: 2.5vmin;
+  }
+
+  .joinusb {
+      padding: 10px;
+      font-size: 12px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr; /* Stack sections in a single column */
+  }
+
+  .footer-section h4 {
+    font-size: 16px;
+  }
+
+  .footer-section ul li a {
+    font-size: 12px;
+  }
+
+  .cta-button {
+    width: 100%; /* Full-width button */
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack cards in a single column */
+  }
+
+  .content h2 {
+    font-size: 1.5rem; /* Smaller heading for small screens */
+  }
+
+  .content p {
+    font-size: 0.9rem; /* Smaller paragraph text */
+  }
+
+ 
+  .ex-agenda-section .description-2,
+  .ex-agenda-section .white-text {
+    padding: 0 20px; /* Reduced padding for small screens */
+  }
+
+  .ex-agenda-section .body {
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+
+  .ex-agenda-section .subtitle {
+    font-size: 18px; /* Adjust subtitle size for mobile */
   }
 
 
-  const countdownDate = new Date();
-    countdownDate.setDate(countdownDate.getDate() + 100);
 
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = countdownDate - now;
+  .ex-agenda-section .row {
+    flex-direction: column;
+    align-items: center;
+  }
 
-        // Calculate time components
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  .ex-agenda-section .col {
+    width: 100%; /* Ensure columns take full width */
+    text-align: center;
+  }
 
-        // Update the HTML elements with the calculated values
-        document.getElementById("days").textContent = days < 10 ? '0' + days : days;
-        document.getElementById("hours").textContent = hours < 10 ? '0' + hours : hours;
-        document.getElementById("minutes").textContent = minutes < 10 ? '0' + minutes : minutes;
-        document.getElementById("seconds").textContent = seconds < 10 ? '0' + seconds : seconds;
+  .ex-agenda-section .subtitle,
+  .ex-agenda-section .body {
+    text-align: center; /* Ensure the text is centered */
+  }
 
-        // If the countdown is finished, display a message
-        if (distance < 0) {
-            clearInterval(timer);
-            document.querySelector('.countdown').innerHTML = "Countdown Finished!";
-        }
-    }
+  /* Responsive text for mobile */
+  .ex-agenda-section h1 {
+    font-size: 5vw; /* Responsive heading for mobile */
+  }
 
-    // Update the countdown every second
-    const timer = setInterval(updateCountdown, 1000);
-    updateCountdown(); 
+  .ex-agenda-section h2 {
+    font-size: 4.5vw;
+  }
+
+  .ex-agenda-section p {
+    font-size: 3.5vw;
+  }
+  .menu-icon {
+    display: none;
+  }
+}
+
+
+
+
+@media (min-width: 481px) and (max-width: 1200px) {
   
-</script>
-<script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+      .menu-icon {
+    display: none;
+  }
+   .navbar {
+    padding: 20px;
+  }
 
-  </body>
-</html>
+  .navbar .logo img {
+    height: 45px; /* Slightly smaller logo */
+  }
+
+  .nav-links li a {
+    font-size: 16px; /* Adjust font size for better readability */
+  }
+  .Partner {
+      height: 45px;
+      font-size: 13px;
+      padding: 15px;
+  }
+
+  .drop {
+      margin: 15px;
+  }
+
+  .pricing-container {
+      padding: 20px;
+  }
+
+  .pricing-containercard {
+      min-height: 500px; /* Standard height for medium screens */
+  }
+
+  .plan-type {
+      font-size: 16px;
+  }
+
+  .price {
+      font-size: 28px;
+  }
+
+  .features li {
+      font-size: 14px;
+  }
+
+  .choose-plan {
+      font-size: 14px;
+  }
+
+  .joinus h1 {
+      font-size: 6vmin;
+  }
+
+  .joinus h2 {
+      font-size: 2.5vmin;
+  }
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+
+  .footer-section h4 {
+    font-size: 18px;
+  }
+
+  .footer-section ul li a {
+    font-size: 14px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+
+  .content h2 {
+    font-size: 2rem; /* Adjusted heading size */
+  }
+
+  .content p {
+    font-size: 1rem; /* Normal paragraph size */
+  }
+
+  .ex-agenda-section .description-2,
+  .ex-agenda-section .white-text {
+    padding: 0 50px; /* Moderate padding for medium screens */
+  }
+
+  .ex-agenda-section .body {
+    font-size: 13px; /* Slightly larger font size for tablets */
+  }
+
+  .ex-agenda-section .subtitle {
+    font-size: 20px; /* Adjust subtitle size for tablets */
+  }
+
+  .ex-agenda-section h1 {
+    font-size: 3.5vw; /* Responsive heading for tablets */
+  }
+
+  .ex-agenda-section h2 {
+    font-size: 3vw;
+  }
+
+  .ex-agenda-section p {
+    font-size: 2.5vw;
+  }
+
+  .ex-agenda-section .row {
+    flex-direction: row; /* Ensure columns are side by side */
+    align-items: center;
+  }
+
+  .ex-agenda-section .col {
+    width: 50%;
+    text-align: left;
+  }
+
+
+}
+
+/* Medium screens (481px to 1200px) */
+@media (min-width: 1201px) and (max-width: 1200px) {
+  .navbar .logo img {
+    height: 45px;
+  }
+
+  .hero h2 {
+    font-size: 70px;
+  }
+
+  .button {
+    width: auto;
+    margin-top: 30px;
+  }
+
+  .image-container {
+    padding: 0 40px;
+  }
+
+  .countdown-container {
+    padding: 15px 30px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .container-highlight {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+.container-highlight h1 {
+    font-size: 48px;
+}
+
+.left-section, .right-section {
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.left-section h1, .right-section h3 {
+    font-size: 1.8rem;
+}
+
+.left-section h4 {
+    font-size: 2rem;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+
+
+}
+
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+  .container-highlight {
+      margin-left: 30px;
+      margin-right: 30px;
+      padding: 20px;
+  }
+
+  .container-highlight h1 {
+      font-size: 56px;
+  }
+
+  .left-section, .right-section {
+      max-width: 48%;
+      padding: 15px;
+      margin-bottom: 30px;
+  }
+
+  .left-section h1, .right-section h3 {
+      font-size: 2rem;
+  }
+
+  .left-section h4 {
+      font-size: 2.2rem;
+  }
+
+  .btn {
+      padding: 15px 25px;
+      font-size: 1rem;
+  }
+
+
+  .Partner {
+    height: 50px;
+    font-size: 14px;
+}
+
+.drop {
+    margin: 20px;
+}
+
+.pricing-container {
+    padding: 20px;
+}
+
+.pricing-containercard {
+    min-height: 600px;
+}
+
+.plan-type {
+    font-size: 18px;
+}
+
+.price {
+    font-size: 30px;
+}
+
+.choose-plan {
+    font-size: 16px;
+}
+
+.joinus h1 {
+    font-size: 7vmin;
+}
+
+.joinus h2 {
+    font-size: 3vmin;
+}
+
+.footer-container {
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+}
+
+.footer-section h4 {
+  font-size: 20px;
+}
+
+.grid-container {
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+}
+
+.content h2 {
+  font-size: 2.5rem; /* Larger heading size */
+}
+
+.content p {
+  font-size: 1.1rem; /* Slightly larger paragraph size */
+}
+
+
+.ex-agenda-section .description-2,
+.ex-agenda-section .white-text {
+  padding: 0 100px; /* Increased padding for larger screens */
+}
+
+.ex-agenda-section .body {
+  font-size: 14px; /* Standard font size */
+}
+
+.ex-agenda-section .subtitle {
+  font-size: 22px; /* Adjust subtitle size for larger screens */
+}
+
+}
+
+
+/* Large screens (1201px and up) */
+@media (min-width: 1201px) {
+  .hero h2 {
+    font-size: 90px;
+  }
+
+  .image-container {
+    padding: 0 70px;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+  .container-highlight {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 20px;
+}
+
+.container-highlight h1 {
+    font-size: 64px;
+}
+
+.left-section, .right-section {
+    max-width: 50%;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.left-section h1, .right-section h3 {
+    font-size: 2.2rem;
+}
+
+.left-section h4 {
+    font-size: 2.5rem;
+}
+
+.btn {
+    padding: 15px 25px;
+    font-size: 1rem;
+}
+
+
+.Partner {
+  height: 60px;
+  font-size: 15px;
+}
+
+.drop {
+  margin: 30px;
+}
+
+.pricing-container {
+  padding: 20px;
+}
+
+.pricing-containercard {
+  min-height: 600px; /* Ensured uniform card height */
+}
+
+.plan-type {
+  font-size: 20px;
+}
+
+.price {
+  font-size: 32px;
+}
+
+.choose-plan {
+  font-size: 18px;
+}
+
+.joinus h1 {
+  font-size: 8vmin;
+}
+
+.joinus h2 {
+  font-size: 4vmin;
+}
+
+.joinusb {
+  padding: 15px;
+}
+}
+
+
+@media (min-width: 1601px) {
+  .footer-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for extra-large screens */
+  }
+
+  .footer-section h4 {
+    font-size: 22px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  }
+
+  .content h2 {
+    font-size: 3rem; /* Largest heading size */
+  }
+
+  .content p {
+    font-size: 1.2rem; /* Larger paragraph size */
+  }
+
+  .ex-agenda-section .description-2,
+  .ex-agenda-section .white-text {
+    padding: 0 200px; /* Maximum padding for extra-large screens */
+  }
+
+  .ex-agenda-section .subtitle {
+    font-size: 24px; /* Largest subtitle size */
+  }
+
+}
+
+
+
+
+/* Media Queries */
+@media (min-width: 319px) and (max-width: 480px) {
+  .edit-grid {
+    grid-template-columns: repeat(2, 1fr); /* 1 column for small screens */
+    gap: 10px; /* Reduce gap for small screens */
+  }
+
+  .card h3 {
+    font-size: 1rem; /* Smaller heading */
+  }
+
+  .card p {
+    font-size: 0.9rem; /* Smaller paragraph text */
+  }
+}
+
+
+
+nav {
+  position: absolute; /* Stays on top of the hero section */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  /* margin: 30px; */
+  /* margin-top: 20px; */
+  /* margin-left: 30px;
+margin-right: 30px; */
+  padding: 15px;
+  z-index: 10;
+}
+
+.logo img {
+  width: 130px; /* Set a fixed width */
+  height: auto; /* Auto height to maintain aspect ratio */
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  color: #000;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-icon i {
+  color: #000;
+  font-size: 30px;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+    overflow: hidden;
+    background-color: #004274; /* Solid background for the mobile menu */
+    width: 100vw; /* Full width for any mobile screen */
+    color: white;
+  }
+  
+
+
+  nav ul li {
+    padding: 20px;
+    padding-top: 0;
+  }
+
+  nav ul li a {
+    color: white; /* Ensure text is white in mobile view */
+  }
+
+  .menu-icon {
+    display: block;
+    color: #000;
+  }
+
+  #menuList {
+    transition: all 0.5s;
+    background-color: #004274; /* Solid background */
+    display: inline;
+    color: white;
+    width: 100vw; /* Full viewport width for the menu */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+
+  .logo img {
+    width: 120px; /* Keep the logo size consistent on mobile as well */
+  }
+}
