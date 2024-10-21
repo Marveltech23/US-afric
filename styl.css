@@ -28,6 +28,7 @@ margin-right: 30px; */
   padding: 15px;
   z-index: 10;
 }
+
 .navbar
 .logo img {
   height: 50px;
@@ -965,16 +966,12 @@ p.speaker-pill {
 
 /* Small screens (up to 480px) */
 @media (min-width: 319px) and (max-width: 480px)  {
- 
 /* 
   .nav-links {
     flex-direction: column;
     text-align: center;
   } */
-
-
-
-
+   
 .navbar {
   flex-direction: column; /* Stack the navbar items vertically */
   align-items: flex-start; /* Align them to the left */
@@ -994,18 +991,28 @@ p.speaker-pill {
   height: 40px; /* Adjust logo size for small screens */
 }
 
-
   .hero-content {
-    margin-top: 50px;
+    margin-top: 90px;
   }
 
   .hero h2 {
     font-size: 50px;
   }
-
+  .hero h1 {
+    font-size: 20px;
+  }
+  .event-details span {
+    font-size: 14px; /* Mobile-specific font size for span */
+  }
   .button {
     width: 100%;
     margin-top: 20px;
+  }
+
+  .hero-content .button {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    padding: 12px 24px; /* Adjust padding for mobile */
+    width: 90%; /* Wider button on mobile screens */
   }
 
   .image-container {
@@ -1634,4 +1641,94 @@ p.speaker-pill {
 
 
 
+nav {
+  position: absolute; /* Stays on top of the hero section */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  /* margin: 30px; */
+  /* margin-top: 20px; */
+  /* margin-left: 30px;
+margin-right: 30px; */
+  padding: 15px;
+  z-index: 10;
+}
 
+.logo img {
+  width: 130px; /* Set a fixed width */
+  height: auto; /* Auto height to maintain aspect ratio */
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  color: #000;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-icon i {
+  color: #000;
+  font-size: 30px;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+    overflow: hidden;
+    background-color: #004274; /* Solid background for the mobile menu */
+    width: 100vw; /* Full width for any mobile screen */
+    color: white;
+  }
+  
+
+
+  nav ul li {
+    padding: 20px;
+    padding-top: 0;
+  }
+
+  nav ul li a {
+    color: white; /* Ensure text is white in mobile view */
+  }
+
+  .menu-icon {
+    display: block;
+    color: #000;
+  }
+
+  #menuList {
+    transition: all 0.5s;
+    background-color: #004274; /* Solid background */
+    display: inline;
+    color: white;
+    width: 100vw; /* Full viewport width for the menu */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+
+  .logo img {
+    width: 120px; /* Keep the logo size consistent on mobile as well */
+  }
+}
