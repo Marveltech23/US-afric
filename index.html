@@ -19,16 +19,26 @@
     <link rel="stylesheet" href="styl.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="logo"><img src="images/logo.png" alt="" /></div>
-      <ul class="nav-links">
-        <li><a href="#Exhibition">Exhibition</a></li>
-        <li><a href="#Organization">Organization</a></li>
-        <li><a href="#Career">Career</a></li>
-      </ul>
-      <button class="Donate">Donate</button>
-    </nav>
+    
 
+
+   <nav>
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo" />
+    </div>
+    <ul id="menuList">
+      <li><a href="#Exhibition">Exhibition</a></li>
+      <li><a href="#Organization">Organization</a></li>
+      <li><a href="#Career">Career</a></li>
+    </ul>
+    <div class="menu-icon">
+        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+    </div>
+</nav>
+
+
+   
+   
     <section class="hero">
       <div class="hero-content">
         <h1>SECURE YOUR SEAT AT</h1>
@@ -268,6 +278,8 @@
     </div>
 
     <br />
+
+
     <section class="ex-agenda-section">
       <div class="container-fluid w-container">
         <h1 class="white-text">Our Expo Agenda</h1>
@@ -349,6 +361,8 @@
         </div>
       </div>
     </section>
+
+    
     <br />
     <br />
     <br />
@@ -890,7 +904,6 @@
       </form>
     </div>
   </div>
-
   <!-- Footer Bottom with Social Media Icons -->
   <div class="footer-bottom">
     <div class="social-media">
@@ -908,6 +921,54 @@
     </div>
   </div>
 </footer>
+   
+<script>
+  let menuList = document.getElementById("menuList")
+  menuList.style.maxHeight = "0px";
+
+  function toggleMenu(){
+      if(menuList.style.maxHeight == "0px")
+      {
+          menuList.style.maxHeight = "300px";
+      }
+      else{
+          menuList.style.maxHeight = "0px";
+      }
+  }
+
+
+  const countdownDate = new Date();
+    countdownDate.setDate(countdownDate.getDate() + 100);
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+
+        // Calculate time components
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Update the HTML elements with the calculated values
+        document.getElementById("days").textContent = days < 10 ? '0' + days : days;
+        document.getElementById("hours").textContent = hours < 10 ? '0' + hours : hours;
+        document.getElementById("minutes").textContent = minutes < 10 ? '0' + minutes : minutes;
+        document.getElementById("seconds").textContent = seconds < 10 ? '0' + seconds : seconds;
+
+        // If the countdown is finished, display a message
+        if (distance < 0) {
+            clearInterval(timer);
+            document.querySelector('.countdown').innerHTML = "Countdown Finished!";
+        }
+    }
+
+    // Update the countdown every second
+    const timer = setInterval(updateCountdown, 1000);
+    updateCountdown(); 
+  
+</script>
+<script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
 
   </body>
 </html>
